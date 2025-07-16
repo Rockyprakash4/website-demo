@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  background: #f2f4f8;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+  margin-top: 100px;
+}
+
+.container {
+  text-align: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.logo img {
+  width: 30px;
+  height: 30px;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  max-width: 400px;
+  margin: auto;
+}
+
+.card h2 {
+  margin: 0;
+}
+
+.card p {
+  margin-top: 5px;
+  color: #666;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+label {
+  text-align: left;
+  margin-bottom: 5px;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.terms {
+  font-size: 13px;
+  margin-top: 15px;
+  text-align: left;
+}
+
+.terms a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+button {
+  background: #3a86ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.login-link {
+  margin-top: 15px;
+  font-size: 13px;
+}
+/* Footer */
+.footer {
+  background-color: #111827;
+  color: #ccc;
+  /* padding: 40px 20px 20px; */
+  font-size: 14px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1500px;
+  margin: auto;
+  margin-top: 200px;
+}
+
+.footer-column h3, .footer-column h4 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.footer-column p {
+  margin: 0;
+  color: #aaa;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+  color: #aaa;
+}
+
+.footer-icon {
+  font-size: 18px;
+  margin-right: 5px;
+  color: #4dabf7;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  color: #666;
+}
+</style>
+<body>
+        <div class="container">
+        <div class="logo">
+      <img src="logo" alt="Logo">
+      <span>SocialAds </span>
+     </div>
+
+     <div class="card">
+      <h2>Create your account</h2>
+      <p>Start your free trial today</p>
+
+        <form>
+            <label>Full name</label>
+            <input type="text" placeholder="Enter your full name" required>
+
+            <label>Email address</label>
+            <input type="email" placeholder="Enter your email" required>
+
+            <label>Password</label>
+            <input type="password" placeholder="Create a password" required>
+
+            <label>Confirm password</label>
+            <input type="password" placeholder="Confirm your password" required>
+
+            <label class="terms">
+            <input type="checkbox" required> I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+            </label>
+
+            <button type="submit">Get Started</button>
+            <p class="login-link">Already have an account? <a href="C:\Users\user\Desktop\my project\site\login.html">Login</a></p>
+        </form>
+    </div>
+    
+
+
+  <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3><span class="footer-icon">⚡</span> SocialAds </h3>
+                <p>Empower your business with intelligent social media advertising that drives results.</p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Product</h4>
+                <ul>
+                <a href="pricing.html"> <li> pricing</li> </a>
+                <li>Dashboard</li>
+                <li>Features</li>
+                <li>Analytics</li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Company</h4>
+                <ul>
+                <li>About Us</li>
+                <li>Contact</li>
+                <li>Privacy Policy</li>
+                <li>Terms of Service</li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Contact</h4>
+                <ul>
+                <li>📧 support@socialadspro.com</li>
+                <li>📞 +91-99999999</li>
+                <li>📍 india</li>
+                </ul>
+            </div>
+        </div>
+            <div class="footer-bottom">
+                © 2025 SocialAds . All rights reserved.
+            </div>
+  </footer>
+</body>
+</html>
+</head>

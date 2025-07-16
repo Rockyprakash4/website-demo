@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pricing of SocialAds</title>
+</head>
+<style>
+  *  {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #f9f9f9;
+  color: #222;
+}
+
+header {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 1rem 2rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #007aff;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+}
+
+.btn-primary {
+  padding: 0.5rem 1rem;
+  background: #007aff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #f9f9f9;
+}
+
+.pricing-section {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.pricing-section h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.pricing-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  max-width: 300px;
+  position: relative;
+}
+
+.icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #007aff;
+}
+
+.price {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.price span {
+  font-size: 1rem;
+  color: #777;
+}
+
+.card ul {
+  list-style: none;
+  text-align: left;
+  margin-top: 1rem;
+}
+
+.card ul li {
+  margin: 0.5rem 0;
+}
+
+.popular {
+  border: 2px solid #007aff;
+  transform: scale(1.05);
+}
+
+.badge {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #007aff;
+  color: white;
+  padding: 0.3rem 0.7rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+.start-button {
+  background-color: #07060a;
+  color: #1a75ff;
+  padding: 12px 20px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  padding-top: 4px;
+}
+
+.start-button:hover {
+  background-color: #e0e0e0;
+}
+ .trial {
+    background-color: #2563eb;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 500;
+      margin-left: 12px;
+      background-color: transparent;
+      color: #2563eb;
+      border: 1px solid #2563eb;
+    }
+    /* .page{
+        text-decoration: line-through;
+        text-decoration: underline;
+        text-decoration-style: solid;
+    } */
+     .faq-section {
+  margin: 4rem 2rem;
+  text-align: center;
+}
+
+.faq-box {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.faq-box h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.faq-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.faq-item {
+  flex: 1;
+  min-width: 250px;
+}
+
+.faq-item strong {
+  display: block;
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #111;
+}
+
+.faq-item p {
+  margin-top: 0.3rem;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.cta-box {
+  text-align: center;
+}
+
+.cta-box h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.cta-box p {
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.btn-cta {
+  padding: 0.75rem 1.5rem;
+  background: #5d5fef;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.help-btn{
+     padding: 0.75rem 1.5rem;
+  background: #5d5fef;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+
+}
+
+.btn-cta:hover {
+  background: #3d3fdd;
+}
+.card-help{
+    padding-left: 1200px;
+    padding-bottom: 50px;
+
+}
+
+.footer {
+  background-color: #111827;
+  color: #ccc;
+  padding: 40px 20px 20px;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-column h3, .footer-column h4 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.footer-column p {
+  margin: 0;
+  color: #aaa;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+  color: #aaa;
+}
+
+.footer-icon {
+  font-size: 18px;
+  margin-right: 5px;
+  color: #4dabf7;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  color: #666;
+}
+
+</style>
+<body>
+     <header>
+    <div class="navbar">
+      <div class="logo">⚡ SocialAds Pro</div>
+      <nav>
+        <a href="#" class="page">Pricing</a>
+        <a href="C:\Users\user\Desktop\my project\site\login.html">Login</a>
+        <button class="btn-primary"><a href="C:\Users\user\Desktop\my project\site\createacc.html">GetStarted</a></button>
+      </nav>
+    </div>
+  </header>
+
+  <section class="pricing-section">
+    <h1>Simple, Transparent Pricing</h1>
+    <p class="subtitle">Choose the perfect plan for your business. All plans include a 14-day free trial.</p>
+
+    <div class="pricing-cards">
+      <!-- Starter -->
+      <div class="card">
+        <div class="icon">⚡</div>
+        <h2>Starter</h2>
+        <p class="price"> ₹999<span>/month</span></p>
+        <ul>
+          <li>✅ Up to 3 social media platforms</li>
+          <li>✅ 5 active campaigns</li>
+          <li>✅ Basic analytics</li>
+          <li>✅ Email support</li>
+          <li>✅ ₹45,000 monthy  ad spend limit </li>
+          <li>✅standard target options</li>
+        </ul>
+        <a href="C:\Users\user\Desktop\my project\site\createacc.html"><button class="trial">Start Free trial</button></a>
+      </div>
+
+      <!-- Professional -->
+      <div class="card popular">
+        <div class="badge">Most Popular</div>
+        <div class="icon">📈</div>
+        <h2>Professional</h2>
+        <p class="price"> ₹4,499<span>/month</span></p>
+        <ul>
+          <li>✅ All social media platforms</li>
+          <li>✅ Unlimited campaigns</li>
+          <li>✅ Advanced analytics & reporting</li>
+          <li>✅Priority support</li>
+          <li>✅ ₹75,000 monthy  ad spend limit </li>
+          <li>✅ Advanced targeting & automation</li>
+          <li>✅ Custom audiences</li>
+        </ul>
+        <a href="#" class="start-button">Get Started Today →</a>
+      </div>
+
+      <!-- Enterprise -->
+      <div class="card">
+        <div class="icon">📊</div>
+        <h2>Enterprise</h2>
+        <p class="price"> ₹10,000<span>/month</span></p>
+        <ul>
+          <li>✅ Everything in Professional</li>
+          <li>✅ Unlimited ad spend</li>
+          <li>✅ White-label reporting</li>
+          <li>✅ dedicated account manager</li>
+          <li>✅ Advanced security features</li>
+          <li>✅ Custom integrations</li>
+        </ul>
+         <button class="trial">contact sales</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section">
+  <div class="faq-box">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-columns">
+      <div class="faq-item">
+        <strong>Can I change my plan anytime?</strong>
+        <p>Yes, you can upgrade or downgrade your plan at any time. Changes will be reflected in your next billing cycle.</p>
+        
+        <strong>What payment methods do you accept?</strong>
+        <p>We accept all major credit cards, PayPal, and bank transfers for Enterprise customers.</p>
+      </div>
+      <div class="faq-item">
+        <strong>Is there a free trial?</strong>
+        <p>All plans come with a 14-day free trial. No credit card required to start.</p>
+        
+        <strong>Can I cancel anytime?</strong>
+        <p>Yes, you can cancel your subscription at any time. Your account will remain active until the end of your billing period.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-box">
+    <h2>Ready to get started?</h2>
+    <p>Start your free trial today and see the difference SocialAds Pro can make.</p>
+    <a  href="#"><button class="btn-cta">Free Trial</button></a>
+  </div>
+</section>
+
+<div class="card-help">
+        <div class="icon">🛡️ <a  href="file:///C:/Users/user/Desktop/my%20project/site/help.html#"><button class="help-btn">May I Help you</button></a></div>
+        <h2>Ask me anything</h2>
+        <p>simply proceed without any uncertainty.</p>
+      </div>
+
+
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3><span class="footer-icon">⚡</span> SocialAds </h3>
+      <p>Empower your business with intelligent social media advertising that drives results.</p>
+    </div>
+
+    <div class="footer-column">
+      <h4>Product</h4>
+      <ul>
+        <a href="pricing.html"> <li> pricing</li> </a>
+        <li>Dashboard</li>
+        <li>Features</li>
+        <li>Analytics</li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Company</h4>
+      <ul>
+        <li>About Us</li>
+        <li>Contact</li>
+        <li>Privacy Policy</li>
+        <li>Terms of Service</li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Contact</h4>
+      <ul>
+        <li>📧 support@socialads.com</li>
+        <li>📞 +91-99999999</li>
+        <li>📍 india</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2025 SocialAds . All rights reserved.
+  </div>
+</footer>
+    
+</body>
+</html>
