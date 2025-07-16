@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SocialAds </title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+      color: #111;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: white;
+      border-bottom: 1px solid #eaeaea;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: bold;
+      font-size: 20px;
+      color: #333;
+    }
+
+    .logo img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .buttons button {
+      background-color: #2563eb;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 500;
+      margin-left: 12px;
+    }
+
+    .buttons button.outline {
+      background-color: transparent;
+      /* color:#f8f9fa; */
+       color: white;
+      border: 1px solid #2563eb;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px 40px;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+
+    .hero h1 span {
+      color: #2563eb;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #555;
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+
+    .hero_buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 60px;
+    }
+
+    .hero_buttons a {
+      padding: 12px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .hero_buttons a.free_trail {
+      background-color: #2563eb;
+      color: white;
+    }
+
+    .hero_buttons a.pricing {
+      background-color: transparent;
+      color: #2563eb;
+      border: 2px solid #2563eb;
+    }
+
+    .caption {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: white;
+    }
+
+    .caption h2 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .caption p {
+      color: #666;
+      font-size: 16px;
+    }
+    .container {
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: #fff;
+  padding: 25px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+  text-align: left;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #4169e1; /* Royal blue tone */
+}
+
+h2 {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #111;
+}
+h4{
+  color: #111;
+}
+
+p {
+  font-size: 14px;
+  color: #555;
+}
+.start-section {
+  background: linear-gradient(135deg, #1a75ff, #4d94ff);
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+  background-color: rgb(28, 33, 180);
+}
+
+.start-section h2 {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.start-section p {
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+.start-button {
+  background-color: #fff;
+  color: #1a75ff;
+  padding: 12px 24px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.start-button:hover {
+  background-color: #e0e0e0;
+}
+
+/* Footer */
+.footer {
+  background-color: #111827;
+  color: #ccc;
+  padding: 40px 20px 20px;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-column h3, .footer-column h4 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.footer-column p {
+  margin: 0;
+  color: #aaa;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+  color: #aaa;
+}
+
+.footer-icon {
+  font-size: 18px;
+  margin-right: 5px;
+  color: #4dabf7;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  color: #666;
+}
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="add logo" />
+      SocialAds 
+    </div>
+    <div class="buttons">
+      <a href="C:\Users\user\Desktop\my project\site\login.html"class="outline"><button>Login</button></a>
+     <a href="C:\Users\user\Desktop\my project\site\createacc.html"><button>Get Started </button> </a>
+    </div>
+  </header>
+
+  <div class="hero">
+    <h1>Amplify Your Brand with <span>Smart Social Ads</span></h1>
+    <p>Create, manage, and optimize your social media advertising campaigns across multiple platforms. 
+    Drive engagement, increase conversions, and grow your business with intelligent ad management.</p>
+    <div class="hero_buttons">
+      <a href="C:\Users\user\Desktop\my project\site\createacc.html" class="free_trail">Start Free Trial</a>
+      <a href="file:///C:/Users/user/Desktop/my%20project/site/pricing.html" class="pricing">View Pricing</a>
+    </div>
+  </div>
+
+  <div class="caption">
+    <h2>Everything You Need to Succeed</h2>
+    <p>Powerful tools and insights to create winning social media campaigns</p>
+  </div>
+    <div class="container">
+    <h1>Powerful tools and insights to create winning social media campaigns</h1>
+    
+    <div class="cards">
+      <div class="card">
+        <div class="icon">📱</div>
+        <h2>Multi-Platform Campaigns</h2>
+        <p>Create and manage ads across Facebook, Instagram, Twitter, LinkedIn, and more from one dashboard.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">📊</div>
+        <h2>Real-Time Analytics</h2>
+        <p>Track performance metrics, ROI, and engagement rates with comprehensive analytics and reporting.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">⏰</div>
+        <h2>Automated Scheduling</h2>
+        <p>Schedule your ads for optimal times and automate posting across different time zones.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🛡️</div>
+        <h2>Secure Payment Processing</h2>
+        <p>Enterprise-grade security for all transactions with multiple payment options and fraud protection.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🎯</div>
+        <h2>Audience Targeting</h2>
+        <p>Advanced targeting options to reach your ideal customers with precision and efficiency.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">⚡</div>
+        <h2>boosting ads</h2>
+        <p>boosting ads and optimize your campaigns automatically or manually for better performance.</p>
+      </div>
+    </div>
+  </div>
+  <section class="start-section">
+  <h2>Ready to Transform Your Social Media Marketing?</h2>
+  <h4>Join now to transform and grow with SocialAds. </h4>
+  <a href="#" class="start-button">Get Started Today →</a>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3><span class="footer-icon">⚡</span> SocialAds </h3>
+      <p>Empower your business with intelligent social media advertising that drives results.</p>
+    </div>
+
+    <div class="footer-column">
+      <h4>Product</h4>
+      <ul>
+       <a href="pricing.html"> <li> pricing</li> </a>
+        <li>Dashboard</li>
+        <li>Features</li>
+        <li>Analytics</li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Company</h4>
+      <ul>
+        <li>About Us</li>
+        <li>Contact</li>
+        <li>Privacy Policy</li>
+        <li>Terms of Service</li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Contact</h4>
+      <ul>
+        <li>📧 support@socialadspro.com</li>
+        <li>📞 +91-99999999</li>
+        <li>📍 india</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2025 SocialAds . All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>
+</head>
+  
